@@ -61,7 +61,7 @@ final class ArrayEngine extends StringEngine
                     break;
                 case 'object':
                     $exporterPadSize = 4;
-                    $padCorrection = self::PAD_SIZE / $exporterPadSize;
+                    $padCorrection = (int)(self::PAD_SIZE / $exporterPadSize);
                     $line = sprintf(
                         '%s => %s,',
                         $key,
