@@ -75,7 +75,7 @@ final class NewFileNotifyingGenerator implements Generator
     {
         if (!$fileExisted && $this->fileExists($filePath)) {
             $event = new FileCreationEvent($filePath);
-            $this->dispatcher->dispatch('afterFileCreation', $event);
+            $this->dispatcher->dispatch($event, 'afterFileCreation');
         }
     }
 }

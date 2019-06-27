@@ -9,6 +9,7 @@ use PhpSpec\Loader\Node\SpecificationNode;
 use PhpSpec\Loader\Suite;
 
 use Exception;
+use Symfony\Contracts\EventDispatcher\Event;
 
 class ExampleEventSpec extends ObjectBehavior
 {
@@ -22,7 +23,7 @@ class ExampleEventSpec extends ObjectBehavior
 
     function it_is_an_event()
     {
-        $this->shouldBeAnInstanceOf('Symfony\Component\EventDispatcher\Event');
+        $this->shouldBeAnInstanceOf(Event::class);
         $this->shouldBeAnInstanceOf('PhpSpec\Event\PhpSpecEvent');
     }
 
